@@ -1,0 +1,46 @@
+QWidget {
+    background-color: white;
+
+}
+
+
+
+
+#widget,#widget_2 {
+    background-color: qlineargradient(spread:pad, y1:0,y2:1,stop:0 #007991, stop:1 #78ffd6);
+    border:0px  none gray;
+    border-radius:20px;
+}
+#lineEdit,#lineEdit2,#lineEdit_2,#lineEdit_3{
+    font-size: 20px;
+    padding-left: 35px;
+    border:0px  none gray;
+    border-radius:15px;
+
+}
+
+#pushButton,#pushButton_2 {
+    color: #007991;
+    font-family: "楷体";
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border:0px none gray;border-radius:10px;
+}
+#pushButton:hover,#pushButton_2:hover{
+    color: #000000;
+    font-family: "楷体";
+    font-size: 25px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+#pushButton_zhu{
+    color: #007991;
+    font-size: 20px;
+    border:0px none gray;
+}
+#pushButton_zhu:hover{
+    color: #840228;
+    font-size: 20px;
+}

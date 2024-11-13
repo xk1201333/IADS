@@ -1,0 +1,327 @@
+QWidget {
+    background-color: #FFFFFF;
+}
+
+#ImglistWidget{
+    border:0px
+}
+
+
+
+/*菜单*/
+QMenu{
+    background:white;
+    border:1px solid lightgray;
+}
+QMenu::item{
+    padding:5px 15px;
+    margin:1px 2px;
+    color:#222222;
+}
+
+QMenu::item:hover{
+    background:#DAEBF7;
+}
+
+QMenu::item:selected{
+    background:#DAEBF7;
+}
+
+/*下拉框*/
+QComboBox {
+    color:#4A7298;
+    border: 2px dashed rgb(203, 224, 178);
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    font: 10pt bold "Times New Roman";
+}
+
+
+/* 编辑框*/
+QLineEdit {
+    background:transparent;
+    border: 1px solid lightgray;
+    font: bold "Times New Roman";
+}
+
+
+/*ToolBox*/
+QToolBox:tab {
+    font-size: 20px;
+    font-family: "Times New Roman";
+    background-color: #F0FFFF;
+}
+
+QToolBox:tab:hover {
+    font-size: 23px;
+    font-family: "Times New Roman";
+    background-color: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+QToolBox:tab:selected{
+    font-size: 23px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    background-color:#008080;
+}
+
+QGraphicsView{
+  background: transparent;
+  border:0px
+}
+
+
+
+
+QTreeView {
+  border:0px
+}
+QTabWidget::pane {
+  border: 1px dashed #55AAC6;
+}
+
+
+/* 标题设置 */
+QDockWidget::title {
+  background-color: transparent;/* 设置标题栏背景颜色 */
+}
+QDockWidget::title:hover{
+  background-color: #9C93E6;
+}
+
+
+/* 关闭和显示按钮 */
+QDockWidget::close-button, QDockWidget::float-button {
+
+}
+
+/* 鼠标悬浮状态 */
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+
+}
+
+/* 鼠标按下状态 */
+QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+
+}
+
+
+
+/*按键*/
+QPushButton {
+    color: #BDC8E2;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #2E3648;
+}
+
+QPushButton:hover {
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 25px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #78ffd6, stop:1 #007991);
+}
+QPushButton:disabled {
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 25px;
+    font-weight: bold;
+    background-color:transparent;
+}
+
+
+
+#pushButton_centre {
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#pushButton_centre:hover {
+   color: #000000;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+#salt_noise,#guass_noise,#middle_filter,#average_filter,#window_filter,#form_filter,#gauss_filter{
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#salt_noise:hover,#guass_noise:hover,#middle_filter:hover,#average_filter:hover,#window_filter:hover,#form_filter:hover,#gauss_filter:hover {
+   color: #000000;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+#affine,#perspective{
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#affine:hover,#perspective:hover {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+
+#pushButton_color,#Annotation_2,#Annotation_3,#Annotation_4,#Annotation_5,#Annotation_6,#Annotation_7,#Annotation_8{
+   color: #007991;
+   font-size: 20px;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+
+
+
+#pushButton_color:hover,#Annotation_2:hover,#Annotation_3:hover,#Annotation_4:hover,#Annotation_5:hover,#Annotation_6:hover,#Annotation_7:hover,#Annotation_8:hover {
+   color: #000000;
+   font-weight: bold;
+   background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+
+/**************************QScrollBar Vertical**************************/
+QScrollBar:vertical {
+    background: transparent;
+    border: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 12px;
+}
+QScrollBar::handle:vertical {
+    background: transparent;
+    background-color:#8C9FCA;
+    border: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 10px;
+}
+
+QScrollBar::sub-line:vertical {
+    background: transparent;
+    margin: 0px;
+    border-width: 0px;
+    height: 0px;
+    width: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical {
+    background: transparent;
+    margin: 0px;
+    border-width: 0px;
+    height: 0px;
+    width: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical {
+    background: transparent;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+}
+QScrollBar::down-arrow:vertical {
+    background: transparent;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+}
+
+QScrollBar::add-page:vertical {
+    background:qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+QScrollBar::sub-page:vertical {
+    background:qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+/**************************QScrollBar Horizontal**************************/
+QScrollBar:horizontal {
+     background: transparent;
+     border: 0px;
+     margin: 0px 0px 0px 0px;
+     height: 12px;
+}
+
+QScrollBar::handle:horizontal {
+     background: transparent;
+     border: 0px;
+     background-color:#8C9FCA;
+     margin: 1px 0px 1px 0px;
+     height: 10px;
+     min-width: 10px;
+     width: 69px;
+}
+
+QScrollBar::sub-line:horizontal {
+     background: transparent;
+     margin: 0px;
+     border-width: 0px;
+     height: 0px;
+     width: 0px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+}
+QScrollBar::add-line:horizontal {
+     background: transparent;
+     margin: 0px;
+     border-width: 0px;
+     height: 0px;
+     width: 0px;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:horizontal {
+     background: transparent;
+     width: 0px;
+     height: 0px;
+     margin: 0px;
+}
+QScrollBar::down-arrow:horizontal {
+     background: transparent;
+     width: 0px;
+     height: 0px;
+     margin: 0px;
+}
+QScrollBar::add-page:horizontal{
+     background:qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+QScrollBar::sub-page:horizontal {
+     background:qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+QScrollArea{
+  color:#ffffff;
+  font-family:"等线";
+  font-size:15px;
+  background-color:white;
+  border:0px solid #838486;
+}
+
+
+
+
+
+

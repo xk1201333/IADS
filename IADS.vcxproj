@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FB6F8423-3501-3CA4-832B-FAA13FA840CC}</ProjectGuid>
+    <RootNamespace>IADS</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>IADS</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>IADS</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>IADS</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>IADS</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;sql;network;gui;multimedia;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;sql;opengl;network;gui;multimedia;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;C:\opencv-4.5.1\opencv\opencv-build\install\include;C:\opencv-4.5.1\opencv\opencv-build\install\include\opencv2;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\include;C:\Program Files\VTK\include\vtk-8.2\;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\opencv-4.5.1\opencv\opencv-build\lib\libopencv_*.a;C:\opencv-4.5.1\opencv\build\x64\vc15\lib\opencv_world451.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avcodec.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avdevice.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avfilter.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avformat.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avutil.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\postproc.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\swresample.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\swscale.lib;vtkChartsCore-8.2.lib;vtkCommonColor-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkCommonCore-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonTransforms-8.2.lib;vtkDICOMParser-8.2.lib;vtkDomainsChemistry-8.2.lib;vtkDomainsChemistryOpenGL2-8.2.lib;vtkdoubleconversion-8.2.lib;vtkexodusII-8.2.lib;vtkexpat-8.2.lib;vtkFiltersAMR-8.2.lib;vtkFiltersCore-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersFlowPaths-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkFiltersGeneric-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkFiltersHyperTree-8.2.lib;vtkFiltersImaging-8.2.lib;vtkFiltersModeling-8.2.lib;vtkFiltersParallel-8.2.lib;vtkFiltersParallelImaging-8.2.lib;vtkFiltersPoints-8.2.lib;vtkFiltersProgrammable-8.2.lib;vtkFiltersSelection-8.2.lib;vtkFiltersSMP-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkFiltersTexture-8.2.lib;vtkFiltersTopology-8.2.lib;vtkFiltersVerdict-8.2.lib;vtkfreetype-8.2.lib;vtkGeovisCore-8.2.lib;vtkgl2ps-8.2.lib;vtkglew-8.2.lib;vtkGUISupportQt-8.2.lib;vtkGUISupportQtSQL-8.2.lib;vtkhdf5-8.2.lib;vtkhdf5_hl-8.2.lib;vtkImagingColor-8.2.lib;vtkImagingCore-8.2.lib;vtkImagingFourier-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingHybrid-8.2.lib;vtkImagingMath-8.2.lib;vtkImagingMorphological-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingStatistics-8.2.lib;vtkImagingStencil-8.2.lib;vtkInfovisCore-8.2.lib;vtkInfovisLayout-8.2.lib;vtkInteractionImage-8.2.lib;vtkInteractionStyle-8.2.lib;vtkInteractionWidgets-8.2.lib;vtkIOAMR-8.2.lib;vtkIOAsynchronous-8.2.lib;vtkIOCityGML-8.2.lib;vtkIOCore-8.2.lib;vtkIOEnSight-8.2.lib;vtkIOExodus-8.2.lib;vtkIOExport-8.2.lib;vtkIOExportOpenGL2-8.2.lib;vtkIOExportPDF-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOImage-8.2.lib;vtkIOImport-8.2.lib;vtkIOInfovis-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOLSDyna-8.2.lib;vtkIOMINC-8.2.lib;vtkIOMovie-8.2.lib;vtkIONetCDF-8.2.lib;vtkIOParallel-8.2.lib;vtkIOParallelXML-8.2.lib;vtkIOPLY-8.2.lib;vtkIOSegY-8.2.lib;vtkIOSQL-8.2.lib;vtkIOTecplotTable-8.2.lib;vtkIOVeraOut-8.2.lib;vtkIOVideo-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkjpeg-8.2.lib;vtkjsoncpp-8.2.lib;vtklibharu-8.2.lib;vtklibxml2-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkmetaio-8.2.lib;vtkNetCDF-8.2.lib;vtkogg-8.2.lib;vtkParallelCore-8.2.lib;vtkpng-8.2.lib;vtkproj-8.2.lib;vtkpugixml-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingCore-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkRenderingGL2PSOpenGL2-8.2.lib;vtkRenderingImage-8.2.lib;vtkRenderingLabel-8.2.lib;vtkRenderingLOD-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkRenderingQt-8.2.lib;vtkRenderingVolume-8.2.lib;vtkRenderingVolumeOpenGL2-8.2.lib;vtksqlite-8.2.lib;vtksys-8.2.lib;vtktheora-8.2.lib;vtktiff-8.2.lib;vtkverdict-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkViewsInfovis-8.2.lib;vtkViewsQt-8.2.lib;vtkzlib-8.2.lib;shell32.lib;Iphlpapi.lib;ws2_32.lib;wsock32.lib;netapi32.lib;ofstd.lib;oflog.lib;dcmdata.lib;zlib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\VTK\lib\;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\IADS.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;C:\opencv-4.5.1\opencv\opencv-build\install\include;C:\opencv-4.5.1\opencv\opencv-build\install\include\opencv2;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\include;C:\VTK\vtk-8.2.0_bin\include\vtk-8.2;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\opencv-4.5.1\opencv\opencv-build\lib\libopencv_*.a;C:\opencv-4.5.1\opencv\build\x64\vc15\lib\opencv_world451.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avcodec.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avdevice.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avfilter.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avformat.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\avutil.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\postproc.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\swresample.lib;C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib\swscale.lib;C:\VTK\vtk-8.2.0_bin\lib\libvtkChartsCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonColor-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonComputationalGeometry-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonDataModel-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonExecutionModel-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonMath-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonMisc-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonSystem-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkCommonTransforms-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkDICOMParser-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkDomainsChemistry-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkDomainsChemistryOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkdoubleconversion-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkexodusII-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkexpat-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersAMR-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersExtraction-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersFlowPaths-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersGeneral-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersGeneric-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersGeometry-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersHybrid-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersHyperTree-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersImaging-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersModeling-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersParallel-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersParallelImaging-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersPoints-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersProgrammable-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersSelection-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersSMP-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersSources-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersStatistics-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersTexture-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersTopology-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkFiltersVerdict-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkfreetype-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkGeovisCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkgl2ps-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkglew-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkGUISupportQt-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkGUISupportQtOpenGL-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkGUISupportQtSQL-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkhdf5-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkhdf5_hl-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingColor-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingFourier-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingGeneral-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingHybrid-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingMath-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingMorphological-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingSources-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingStatistics-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkImagingStencil-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkInfovisCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkInfovisLayout-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkInteractionImage-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkInteractionStyle-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkInteractionWidgets-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOAMR-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOAsynchronous-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOCityGML-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOEnSight-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOExodus-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOExport-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOExportOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOExportPDF-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOGeometry-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOImage-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOImport-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOInfovis-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOLegacy-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOLSDyna-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOMINC-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOMovie-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIONetCDF-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOParallel-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOParallelXML-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOPLY-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOSegY-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOSQL-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOTecplotTable-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOVeraOut-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOVideo-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOXML-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkIOXMLParser-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkjpeg-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkjsoncpp-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtklibharu-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtklibxml2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtklz4-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtklzma-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkmetaio-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkNetCDF-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkogg-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkParallelCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkpng-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkproj-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkpugixml-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingAnnotation-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingContext2D-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingContextOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingFreeType-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingGL2PSOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingImage-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingLabel-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingLOD-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingQt-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingVolume-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkRenderingVolumeOpenGL2-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtksqlite-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtksys-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkTestingGenericBridge-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkTestingIOSQL-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkTestingRendering-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtktheora-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtktiff-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkverdict-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkViewsContext2D-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkViewsCore-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkViewsInfovis-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkViewsQt-8.2.dll.a;C:\VTK\vtk-8.2.0_bin\lib\libvtkzlib-8.2.dll.a;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openlib\ffmpeg-n4.4.1-win64-gpl-shared-4.4\lib;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\IADS.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ftpwindow.cpp" />
+    <ClCompile Include="loginregister.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="personalcenter.cpp" />
+    <ClCompile Include="splitandmerge.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ftpwindow.h">
+    </QtMoc>
+    <QtMoc Include="loginregister.h">
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+    </QtMoc>
+    <QtMoc Include="matrix.h">
+    </QtMoc>
+    <QtMoc Include="personalcenter.h">
+    </QtMoc>
+    <ClInclude Include="splitandmerge.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IADS_zh_CN.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ftpwindow.ui">
+    </QtUic>
+    <QtUic Include="loginregister.ui">
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+    </QtUic>
+    <QtUic Include="matrix.ui">
+    </QtUic>
+    <QtUic Include="personalcenter.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2.gif" />
+    <None Include="4.gif" />
+    <None Include="IADS.qss" />
+    <None Include="ftp.qss" />
+    <None Include="img\icon\icon.png" />
+    <None Include="login_register.qss" />
+    <None Include="personalcenter.qss" />
+    <QtRcc Include="qss.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qss</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qss</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res</InitFuncName>
+    </QtRcc>
+    <None Include="test.jpeg" />
+    <None Include="img\icon\xiaohui.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

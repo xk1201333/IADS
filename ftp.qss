@@ -1,0 +1,30 @@
+QWidget {
+    background-color: #FFFFFF;
+}
+
+
+
+QPushButton {
+    color: #BDC8E2;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #2E3648;
+}
+
+QPushButton:hover {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #78ffd6, stop:1 #007991);
+}
+QPushButton:disabled {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background-color:transparent;
+}
+
+

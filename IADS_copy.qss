@@ -1,0 +1,128 @@
+﻿QWidget {
+    background-color: #FFFFFF;
+}
+
+/*菜单*/
+QMenu{
+    background:white;
+    border:1px solid lightgray;
+}
+QMenu::item{
+    padding:5px 15px;
+    margin:1px 2px;
+    color:#222222;
+}
+
+QMenu::item:hover{
+    background:#DAEBF7;
+}
+
+QMenu::item:selected{
+    background:#DAEBF7;
+}
+
+
+QComboBox {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6px;
+    font: 10pt "楷体";
+}
+
+
+QPushButton {
+    color: #BDC8E2;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #2E3648;
+}
+
+QPushButton:hover {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #78ffd6, stop:1 #007991);
+}
+QPushButton:disabled {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background-color:transparent;
+}
+
+
+QToolBox:tab {
+    font-size: 20px;
+    font-family: "楷体";
+    background-color: #F0FFFF;
+}
+
+QToolBox:tab:hover {
+    font-size: 20px;
+    font-family: "楷体";
+    background-color: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+QToolBox:tab:selected{
+    font-size: 20px;
+    font-family: "楷体";
+    font-weight: bold;
+    background-color:#008080;
+}
+
+#pushButton_centre {
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#pushButton_centre:hover {
+   color: #000000;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+
+
+#salt_noise,#guass_noise,#middle_filter,#average_filter,#window_filter,#form_filter,#gauss_filter{
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#salt_noise:hover,#guass_noise:hover,#middle_filter:hover,#average_filter:hover,#window_filter:hover,#form_filter:hover,#gauss_filter:hover {
+   color: #000000;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
+
+#affine,#perspective{
+   color: #007991;
+   font-family: "楷体";
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #ffffff;
+   border:0px none gray;border-radius:10px;
+}
+#affine:hover,#perspective:hover {
+    color: #000000;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight: bold;
+    background: qlineargradient(spread:pad, x1:0,x2:1,stop:0 #159957, stop:1 #155799);
+}
+
